@@ -17,7 +17,15 @@
     </form>
 
     <script>
-        document.getElementById("demo").innerHTML = "My First JavaScript";
-        </script>
+        fetch('https://api.ipify.org?format=json')
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById('ip-adresa').textContent = data.ip;
+        })
+        .catch(error => {
+            document.getElementById('ip-adresa').textContent = 'Nelze získat IP adresu';
+            console.error('Chyba:', error);
+        });
+    </script>
 </body>
 </html>
