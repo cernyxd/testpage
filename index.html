@@ -1,31 +1,9 @@
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Přihlašovací formulář</title>
-    
-</head>
+<!DOCTYPE html>
+<html>
 <body>
-    <h2>Přihlašovací formulář</h2>
-    <form action="#" method="POST">
-        <label for="username">Uživatelské jméno:</label><br>
-        <input type="text" id="username" name="username" required><br><br>
 
-        <label for="password">Heslo:</label><br>
-        <input type="password" id="password" name="password" required><br><br>
+<h1>My First Heading</h1>
+<p>My first paragraph.</p>
 
-        <input type="submit" value="Přihlásit se">
-    </form>
-
-    <script>
-        fetch('https://api.ipify.org?format=json')
-        .then(response => response.json())
-        .then(data => {
-            document.getElementById('ip-adresa').textContent = data.ip;
-        })
-        .catch(error => {
-            document.getElementById('ip-adresa').textContent = 'Nelze získat IP adresu';
-            console.error('Chyba:', error);
-        });
-    </script>
 </body>
 </html>
